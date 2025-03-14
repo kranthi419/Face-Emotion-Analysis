@@ -92,3 +92,15 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
+
+"""
+keras~=2.12.0rc0
+tensorflow
+numpy~=1.23.5
+matplotlib~=3.7.0
+pandas~=1.5.3
+seaborn
+opencv-contrib-python==4.7.0.68
+opencv-python
+"""
