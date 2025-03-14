@@ -15,7 +15,7 @@ emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surpri
 
 
 class EmotionDetector(VideoTransformerBase):
-    def recv(self, frame):
+    def transform(self, frame):
         img = frame.to_ndarray(format="bgr24")
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_classifier.detectMultiScale(gray)
@@ -43,4 +43,4 @@ class EmotionDetector(VideoTransformerBase):
 
 # Streamlit UI
 st.title("Real-Time Facial Emotion Detection")
-webrtc_streamer(key="emotion-detection", video_processor_factory=EmotionDetector)
+webrtc_streamer(key="emotion-detection", video_transformer_factory=EmotionDetector)
