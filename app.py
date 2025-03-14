@@ -53,4 +53,3 @@ while run:
     FRAME_WINDOW.image(frame, channels='BGR')
 
 cap.release()
-cv2.destroyAllWindows()
