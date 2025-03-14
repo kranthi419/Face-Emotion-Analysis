@@ -3,4 +3,3 @@ tensorflow
 numpy~=1.23.5
 opencv-python-headless
 streamlit
-streamlit-webrtc
